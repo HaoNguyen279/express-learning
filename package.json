@@ -1,0 +1,28 @@
+{
+  "name": "expresslearning",
+  "version": "1.0.0",
+  "description": "learning-express-des",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --inspect index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HaoNguyen279/express-learning.git"
+  },
+  "keywords": [
+    "express",
+    "backend"
+  ],
+  "author": "HaoNguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HaoNguyen279/express-learning/issues"
+  },
+  "homepage": "https://github.com/HaoNguyen279/express-learning#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10"
+  }
+}
