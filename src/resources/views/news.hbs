@@ -1,9 +1,16 @@
 <h1>News</h1>
-<form method="get" action="/search"> 
+<form method="POST" action=""> 
   <div class="mb-3">
     <label for="color" class="form-label">Color</label>
     <input type="text" class="form-control" id="color" aria-describedby="emailHelp" name="color">
     <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <select name="gender" id="">
+      <option value="">-- Select gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

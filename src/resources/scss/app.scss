@@ -1,5 +1,13 @@
+@use 'variables';
+
 .container{
     display: flex;
     justify-content: center;
     margin: 0 auto;
+}
+.header{
+    color: variables.$red-color;
+}
+.footer{
+    color:purple;
 }
