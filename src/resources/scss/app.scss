@@ -5,9 +5,10 @@
     justify-content: center;
     margin: 0 auto;
 }
-.header{
-    color: variables.$red-color;
+header{
+    background-color: transparent;
 }
-.footer{
-    color:purple;
+footer{
+    bottom: 0%;
 }
+

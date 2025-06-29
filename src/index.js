@@ -23,9 +23,6 @@ app.set('views', path.join(__dirname, 'resources','views'))
 // HTTP logger
 app.use(morgan('combined'));
 
-app.get('/adu', (req, res) => {
-    res.send('Hello Wordddd!');
-})
 app.get('/', (req,res) =>{
     res.render('home');
 })
@@ -35,22 +32,16 @@ app.get('/news', (req,res) =>{
     res.render('news');
 })
 
-app.get('/search', (req,res) =>{
-    console.log(req.query.name);
-    res.render('search');
+app.get('/login', (req,res) =>{
+    res.render('login');
 })
 
-
-app.post('/news', (req,res) =>{
-    console.log(req.body)
-    res.send('');
+app.get('/home', (req,res)=>{
+    res.render('home');
 })
+
 // Middle dc cài sẵn 1 lib là 'qs' (query string - npm) có nhiệm vụ nhận Form Data từ client gửi lên và parse sang biến body
 
-app.get('/jack', (req,res) => {
-    res.send(`<a href='https://www.google.gg/'>Alo</a>`);
-    
-})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
