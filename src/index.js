@@ -4,6 +4,7 @@ const app = express();
 const port = 3000
 const hbs = require('express-handlebars');
 const path = require('path');
+const route = require('./routes')
 
 // Method static khi gặp path trên url này phải kiểm tra với dạng file tĩnh phải kiểm tra thư mục join đã cung cấp trong phương thức static
 app.use(express.static(path.join(__dirname, 'public')));
@@ -23,24 +24,9 @@ app.set('views', path.join(__dirname, 'resources','views'))
 // HTTP logger
 app.use(morgan('combined'));
 
-app.get('/', (req,res) =>{
-    res.render('home');
-})
 
-app.get('/news', (req,res) =>{
-    console.log(req.query.name);
-    res.render('news');
-})
-
-app.get('/login', (req,res) =>{
-    res.render('login');
-})
-
-app.get('/home', (req,res)=>{
-    res.render('home');
-})
-
-// Middle dc cài sẵn 1 lib là 'qs' (query string - npm) có nhiệm vụ nhận Form Data từ client gửi lên và parse sang biến body
+// Routes init
+route(app);
 
 
 app.listen(port, () => {
