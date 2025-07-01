@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "nodemon --inspect src/index.js",
-    "watch" : "sass --watch src/resources/scss/:src/public/css/",
+    "watch": "sass --watch src/resources/scss/:src/public/css/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,6 +25,7 @@
   "dependencies": {
     "express": "^5.1.0",
     "express-handlebars": "^8.0.3",
+    "mongoose": "^8.16.1",
     "nodemon": "^3.1.10"
   },
   "devDependencies": {
