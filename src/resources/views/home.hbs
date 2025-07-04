@@ -64,9 +64,11 @@
                             <h3 class="product-title">{{this.name}}</h3>
                             <div class="product-price">${{this.price}}</div>
                             <p class="text-secondary mb-3">{{this.specs}}</p>
-                            <button class="btn btn-custom w-100">
-                                <i class="fas fa-eye me-2"></i>VIEW DETAILS
-                            </button>
+                            <a href="/laptops/{{this.slug}}">
+                                <button class="btn btn-custom w-100">
+                                    <i class="fas fa-eye me-2"></i>VIEW DETAILS
+                                </button>
+                            </a>
                         </div>
                     </div>
                     {{/each}}
