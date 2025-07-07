@@ -1,7 +1,10 @@
 
 const loginRouter = require('./login');
 const siteRouter = require('./site');
-const laptopRouter = require('./laptops');
+const laptopRouter = require('./laptops');  
+
+const Laptop = require('../app/models/Laptop');
+
 
 function route(app){
 
@@ -10,6 +13,12 @@ function route(app){
     app.use('/', siteRouter);
 
     app.use('/laptops', laptopRouter);
+
+    app.get('/api/product', (req,res) =>{
+        Laptop.find({})
+            .then(laptops => res.json(laptops))
+            .catch(err => console.log(err));
+    });
 
     // Middle dc cài sẵn 1 lib là 'qs' (query string - npm) có nhiệm vụ nhận Form Data từ client gửi lên và parse sang biến body
 }
