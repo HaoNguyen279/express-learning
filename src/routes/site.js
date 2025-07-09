@@ -10,4 +10,6 @@ router.get('/laptops', siteController.index);
 
 router.post('/store', LaptopController.store)
 
+router.get('/', siteController.index);
+
 module.exports = router;

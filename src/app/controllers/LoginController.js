@@ -28,6 +28,18 @@ class LoginController{
             })
             .catch(next);
     }
+    renderRegister(req,res,next){
+        res.render('register');
+    }
+    async createAccount(req,res,next){
+        const account_raw = req.body;
+
+        const newAccount = new Account(account_raw);
+        await Account.create(newAccount)
+            .then(res.send('saved account!'))
+            .catch(next);
+
+    }
 }
 
 module.exports = new LoginController;

@@ -21,7 +21,6 @@ class LaptopController{
         res.send('LAPTOP SAVED!!');
         // res.json(req.body);
     }
-
 }
 
 module.exports = new LaptopController;
