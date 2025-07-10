@@ -10,6 +10,10 @@ router.get('/laptops', siteController.index);
 
 router.post('/store', LaptopController.store)
 
+router.get('/alo', (req, res) => {
+    res.send('alo');
+});
+
 router.get('/', siteController.index);
 
 module.exports = router;
