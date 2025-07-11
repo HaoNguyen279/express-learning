@@ -3,8 +3,10 @@ const router = express.Router();
 const registerControl = require('../app/controllers/LoginController');
 
 
-router.get('/', registerControl.renderRegister);
+
 
 router.post('/registerSuccess', registerControl.createAccount);
+
+router.get('/', registerControl.renderRegister);
 
 module.exports = router;

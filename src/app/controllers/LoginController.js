@@ -18,11 +18,11 @@ class LoginController{
             .then(accountRawData => {
                 console.log(accountRawData);
                 if(!accountRawData) {
-                    res.render('loginSuccess');
+                    res.send('Error!');
                     return;
                 }
                 if(accountRawData.password === data.password){
-                     res.send('vai lon acc dung ne');
+                    res.render('home')
                 }
                 else { res.send('Am cut di');}
             })
@@ -33,12 +33,12 @@ class LoginController{
     }
     async createAccount(req,res,next){
         const account_raw = req.body;
-
+        console.log(account_raw);
         const newAccount = new Account(account_raw);
         await Account.create(newAccount)
-            .then(res.send('saved account!'))
+            .then(() => res.render('registeredSuccessfully'))
             .catch(next);
-
+        console.log(newAccount);
     }
 }
 

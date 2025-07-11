@@ -19,27 +19,6 @@
             box-sizing: border-box;
         }
 
-        // body {
-        //     background: var(--primary-dark);
-        //     color: var(--text-primary);
-        //     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        //     line-height: 1.6;
-        //     overflow-x: hidden;
-        // }
-
-        // body::before {
-        //     content: '';
-        //     position: fixed;
-        //     top: 0;
-        //     left: 0;
-        //     width: 100%;
-        //     height: 100%;
-        //     background: 
-        //         radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-        //         radial-gradient(circle at 80% 20%, rgba(255, 51, 102, 0.1) 0%, transparent 50%),
-        //         radial-gradient(circle at 40% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%);
-        //     z-index: -1;
-        // }
 
         .product-container {
             position: relative;
@@ -129,8 +108,8 @@
             text-shadow: 0 0 20px rgba(255, 51, 102, 0.3);
         }
 
-        .btn-custom {
-            background: var(--gradient-primary);
+        .btn-add-to-card {
+            background: var(--gradient-card);
             border: none;
             padding: 12px 30px;
             border-radius: 25px;
@@ -141,12 +120,13 @@
             box-shadow: 0 8px 25px rgba(255, 51, 102, 0.3);
         }
 
-        .btn-custom:hover {
+        .btn-add-to-card:hover {
             transform: translateY(-3px);
             box-shadow: 0 12px 35px rgba(255, 51, 102, 0.4);
+            background: var(--gradient-card);
         }
 
-        .btn-outline-secondary {
+        .btn-icon {
             border: 2px solid var(--accent-purple);
             color: var(--accent-purple);
             background: transparent;
@@ -155,7 +135,7 @@
             transition: all 0.3s ease;
         }
 
-        .btn-outline-secondary:hover {
+        .btn-icon:hover {
             background: var(--accent-purple);
             color: white;
             transform: translateY(-2px);
