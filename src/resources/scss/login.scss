@@ -55,6 +55,9 @@ h2 {
   border-bottom: 2px solid #ccc;
   margin: 15px 0;
 }
+.input-field-error{
+    border-bottom: 2px solid red;
+}
 
 .input-field label {
   position: absolute;
@@ -66,6 +69,9 @@ h2 {
   pointer-events: none;
   transition: 0.15s ease;
 }
+.label-error{
+  color: red;
+}
 
 .input-field input {
   width: 100%;
@@ -76,12 +82,22 @@ h2 {
   font-size: 16px;
   color: #fff;
 }
-
+// -- Animation label move khi valid hoặc focus input
+// -- Dòng input-field input:focus~lable tức là khi focus vào input đó, sẽ chọn label là 1
+// sibling tiếp theo nó để apply CSS này
 .input-field input:focus~label,
 .input-field input:valid~label {
   font-size: 0.8rem;
-  top: 10px;
+  top: 5px;
   transform: translateY(-120%);
+  color: #fff;
+}
+// -- Fix lỗi khi browser autofill (nhớ account) khi đó sẽ tự động move ko cần đợi focus/valid
+.input-field input:-webkit-autofill~label{
+  font-size: 0.8rem;
+  top: 5px;
+  transform: translateY(-120%);
+  color: #fff;
 }
 
 .forget {
@@ -137,4 +153,9 @@ button:hover {
   text-align: center;
   margin-top: 30px;
   color: #fff;
+}
+
+.login-register-feedback{
+  margin: 0;
+  padding: 0;
 }
