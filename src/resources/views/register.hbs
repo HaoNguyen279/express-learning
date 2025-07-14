@@ -9,23 +9,25 @@
         </div>
 
         <div class="input-field">
-            <input type="password" name="password" id="password-first" required>
+            <input type="text" name="password" id="password-first" required>
             <label id="password-first-label">Enter your password</label>
         </div>
 
 
         <div class="input-field">
-            <input type="password" required id="password-second">
+            <input type="text" required id="password-second">
             <label id="password-second-label">Enter your password again</label>
         </div>
-
+        <div>
+            <p style="color: #c6463f; text-align: start;" id="valid-error"></p>
+        </div>
         <div class="forget">
             <label for="remember">
                 <input type="checkbox" id="remember">   
                 <p style="margin: 0px 0px 0px 10px;">Check to confirm you're not a robot</p>
             </label>
         </div>
-        <button type="submit" id="register-button" >Register</button>
+        <button type="submit" id="register-button" class="btn btn-outline-success disabled" >Register</button>
         <div class="register">
         </div>
     </form>
@@ -40,23 +42,38 @@
     const password_second = document.getElementById('password-second');
     const register_button = document.getElementById('register-button');
     const password_second_label = document.getElementById('password-second-label');
-
-    if(password_first.value !== password_second.value){
-        register_button.disabled = true;
-    }
-    else{
-        register_button.disabled = false;
-    }
+    const message_valid_error = document.getElementById('valid-error');
 
 
-    input_email.addEventListener('blur',validEmail);
-    password_first.addEventListener('blur',validPassword);
-    password_second.addEventListener('blur', validPassword);
+
+    input_email.addEventListener('blur',validAccountRegister);
+    password_first.addEventListener('blur',validAccountRegister);
+    password_second.addEventListener('blur', validAccountRegister);
     
+    function validAccountRegister(){
+        var valid1 = validEmail();
+        var valid2 = validPassword();
+        var valid3 = validPasswordLength();
+        if(!valid2){
+            message_valid_error.innerHTML = '(*) Passwords do not match!'
+        }
+        else if(!valid3){
+            message_valid_error.innerHTML = '(*) Password must contain at least 8 characters!';
+        }
+        else if(!valid1){
+            message_valid_error.innerHTML = '(*) Email first character should be a character not a digit a symbol, and match _@_.com'
+        }
+        else{
+            message_valid_error.innerHTML = '';
+            register_button.classList.remove('disabled');
+
+        }
+    }
     function validEmail(){
         if(!email_regex.test(input_email.value)){
             input_email.closest('.input-field').classList.add('input-field-error');
-            email_label.style = 'color: red;'
+            email_label.style = 'color: #c6463f;'
+            register_button.classList.add('disabled');
             return false;
         }
         else{
@@ -66,9 +83,23 @@
         }
     }
     function validPassword(){
-        if(password_first.value !== password_second.value){
+        if(password_first.value !== password_second.value ){
             password_second.closest('.input-field').classList.add('input-field-error');
-            password_second_label.style = 'color: red;'
+            password_second_label.style = 'color: #c6463f;'
+            register_button.classList.add('disabled');
+            return false;
+        }
+        else{
+            password_second.closest('.input-field').classList.remove('input-field-error');
+            password_second_label.style = '';
+            return true;
+        }
+    }
+    function validPasswordLength(){
+        if(password_first.value.length < 8  ){
+            password_second.closest('.input-field').classList.add('input-field-error');
+            password_second_label.style = 'color: #c6463f;'
+            register_button.classList.add('disabled');
             return false;
         }
         else{
