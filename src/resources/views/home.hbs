@@ -1,40 +1,10 @@
 <div class="bg-animated"></div>
-    
-    <!-- Navigation -->
-    {{!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="home-container">
-            <a class="navbar-brand" href="#">ULTRA LAPTOPS</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#products">PRODUCTS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">ABOUT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">CONTACT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="btn btn-custom ms-3" href="#shop">SHOP NOW</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav> --}}
 
     <!-- Hero Section -->
-
         <section id="home" class="hero">
-            <div class="home-container">
+            <div class="home-container px-md-5 px-4">
                 <div class="row align-items-center">
-                    <div class="col-lg-6">
+                    <div class="col-12 col-lg-6">
                         <div class="hero-content">
                             <h1>POWERFUL LAPTOPS<br>FOR GAMING & WORK</h1>
                             <p>Khám phá bộ sưu tập laptop gaming và làm việc mạnh mẽ nhất. Thiết kế đẳng cấp, hiệu suất vượt trội.</p>
@@ -43,9 +13,9 @@
                             </button>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-12 col-lg-6">
                         <div class="hero-image text-center">
-                            <img src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=600&h=400&fit=crop&auto=format" alt="Gaming Laptop" class="img-fluid">
+                            <img src="https://tse3.mm.bing.net/th/id/OIP.lLeCa_kvBDbMXybzvhIBVQHaGq?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Gaming Laptop" class="img-fluid">
                         </div>
                     </div>
                 </div>
@@ -54,11 +24,11 @@
     
         <!-- Products Section -->
         <section id="products" class="py-5">
-            <div class="home-container">
+            <div class="home-container px-md-5 px-4">
                 <h2 class="section-title fade-in">LATEST MODELS</h2>
                 <div class="row g-4">
                     {{#each laptops}}
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-12 col-lg-4 col-md-6">
                         <div class="product-card fade-in">
                             <img src={{this.image_url}} alt="Image" style="object-fit: contain;">
                             <h3 class="product-title">{{this.name}}</h3>
@@ -79,7 +49,7 @@
     
         <!-- About Section -->
         <section id="about" class="about-section">
-            <div class="home-container">
+            <div class="home-container px-md-5 px-4">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="about-content fade-in">
@@ -139,7 +109,7 @@
     
         <!-- Contact Section -->
         <section id="contact" class="py-5">
-            <div class="home-container">
+            <div class="home-container px-md-5 px-4">
                 <div class="text-center fade-in">
                     <h2 class="section-title">READY TO UPGRADE?</h2>
                     <p class="lead mb-4">Liên hệ với chúng tôi để được tư vấn và chọn lựa laptop phù hợp nhất</p>

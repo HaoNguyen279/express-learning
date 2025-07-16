@@ -1,6 +1,6 @@
 
-<main>
-    <div class="wrapper">
+<div class="container">
+    <div class="wrapper col-12 col-sm-8 col-md-6 col-lg-4 my-5">
     <form method="POST" action="/register/registerSuccess">
         <h2>Register</h2>
         <div class="input-field">
@@ -32,7 +32,7 @@
         </div>
     </form>
     </div>
-</main>
+</div>
 <script>
     const email_regex = /[A-Za-z].+@[A-Za-z]+\.com$/
 
@@ -66,7 +66,6 @@
         else{
             message_valid_error.innerHTML = '';
             register_button.classList.remove('disabled');
-
         }
     }
     function validEmail(){
