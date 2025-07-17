@@ -3,6 +3,7 @@ const loginRouter = require('./login');
 const siteRouter = require('./site');
 const laptopRouter = require('./laptops');  
 const registerRouter = require('./register');
+const cartRouter = require('./cart');
 
 const Laptop = require('../app/models/Laptop');
 
@@ -10,6 +11,8 @@ const Laptop = require('../app/models/Laptop');
 function route(app){
 
     app.use('/login', loginRouter);
+
+    app.use('/cart',cartRouter );
     
     app.use('/register', registerRouter);
     
