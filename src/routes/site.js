@@ -6,8 +6,6 @@ const LaptopController = require('../app/controllers/LaptopController');
 
 // get o duoi
 // use o cap cao hon
-router.get('/laptops', siteController.index);
-
 router.post('/store', LaptopController.store)
 
 router.get('/', siteController.index);

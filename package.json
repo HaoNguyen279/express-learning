@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/HaoNguyen279/express-learning#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.7",
     "express": "^5.1.0",
     "express-handlebars": "^8.0.3",
     "mongoose": "^8.16.1",

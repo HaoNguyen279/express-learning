@@ -10,11 +10,12 @@ const Feedback = new Schema({
     content: String,
 });
 const User = new Schema({
-    userid: String,
-    username : String,
-    user_display_name : String,
-    cart : [Item],
+    email: {type: String, required : true,minlength: 1, maxlength : 64, trim : true},
+    password : {type : String, required : true, minlength: 8, maxlength: 64, trim : true},
+    displayName : {type : String, required : true, minLength : 4, maxlength: 64, trim : true},
     memberShip : String,
-});
+    cart : [Item],
+    reviews : [Feedback]
+}, {timestamps: true});
 
 module.exports = mongoose.model('User', User);

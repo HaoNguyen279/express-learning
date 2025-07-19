@@ -3,9 +3,12 @@ const User = require('../models/User');
 const {mongooseToObject, multipleMongooseToObject} = require('../../utils/mongoose');
 
 class CartController{
+
+    // [GET] Render shopping cart page
     showCart(req, res, next){
         res.render('shoppingCart');
     }
+    
     testjson(req, res, next){
         User.find({})
             .then(data => res.json(data))

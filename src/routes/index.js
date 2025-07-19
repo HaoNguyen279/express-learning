@@ -16,9 +16,12 @@ function route(app){
     
     app.use('/register', registerRouter);
     
+    app.use('/logout', loginRouter );
+    
+    app.use('/laptops', laptopRouter);
+
     app.use('/', siteRouter);
 
-    app.use('/laptops', laptopRouter);
 
     app.get('/api/product', (req,res) =>{
         Laptop.find({})

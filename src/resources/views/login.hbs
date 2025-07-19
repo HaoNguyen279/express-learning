@@ -1,16 +1,21 @@
 
 <main>
     <div class="wrapper">
-    <form method="POST" action="/login/loginSubmit">
+    <form method="POST" action="/login">
         <h2>Login</h2>
         <div class="input-field">
-        <input type="text" name="username" required>
-        <label>Enter your email</label>
+            <input type="text" name="email" value = "{{email}}" required>
+            <label>Enter your email</label>
         </div>
         <div class="input-field">
-        <input type="password" name="password" required>
-        <label>Enter your password</label>
+            <input type="password" name="password" required>
+            <label>Enter your password</label>
         </div>
+        {{#if err}}
+            <div>
+                <p class="text-danger p-0 m-0 text-start">{{err}}</p>
+            </div>
+        {{/if}}
         <div class="forget">
             <label for="remember">
                 <input type="checkbox" id="remember">   
@@ -18,9 +23,11 @@
             </label>
         <a href="#">Forgot password?</a>
         </div>
+        
         <button class="login-button" type="submit">Log In</button>
+
         <div class="register">
-        <p>Don't have an account? <a href="/register">Register</a></p>
+            <p>Don't have an account? <a href="/register">Register</a></p>
         </div>
     </form>
     </div>
