@@ -37,7 +37,6 @@ class LoginController{
                         expireAt : 3600,
                         deviceInfo : "Note 9s Pro Max"
                     }
-
                     await Session.create(new Session(session))
                         .then(sess => console.log('Successfully created session'))
                         .catch(next);
@@ -50,7 +49,6 @@ class LoginController{
                     return;
                 }
             })
-
     }
 
     // [GET] Render register page

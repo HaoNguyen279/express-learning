@@ -1,0 +1,66 @@
+ .laptop-info-root {
+            --laptop-dark-bg: #1a1a1a;
+            --laptop-red-accent: #dc2626;
+            --laptop-purple-accent: #7c3aed;
+            --laptop-gradient-bg: linear-gradient(135deg, #1a1a1a 0%, #2d1b69 50%, #dc2626 100%);
+            --laptop-card-bg: #2d2d2d;
+            --laptop-border-color: #444;
+        }
+        
+        .laptop-info-body {
+            background: var(--laptop-dark-bg);
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .laptop-hero-section {
+            background: var(--laptop-gradient-bg);
+            -webkit-background: var(--laptop-gradient-bg);
+            -moz-background: var(--laptop-gradient-bg);
+            min-height: 100vh;
+        }
+        
+        .laptop-card-dark {
+            background: var(--laptop-card-bg);
+            border: 1px solid var(--laptop-border-color);
+            -webkit-transition: transform 0.3s ease, border-color 0.3s ease;
+            -moz-transition: transform 0.3s ease, border-color 0.3s ease;
+            -ms-transition: transform 0.3s ease, border-color 0.3s ease;
+            -o-transition: transform 0.3s ease, border-color 0.3s ease;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        
+        .laptop-card-dark:hover {
+            -webkit-transform: translateY(-5px);
+            -moz-transform: translateY(-5px);
+            -ms-transform: translateY(-5px);
+            -o-transform: translateY(-5px);
+            transform: translateY(-5px);
+            border-color: var(--laptop-red-accent);
+        }
+        
+        .laptop-btn-gradient {
+            background: linear-gradient(45deg, var(--laptop-red-accent), var(--laptop-purple-accent));
+            -webkit-background: linear-gradient(45deg, var(--laptop-red-accent), var(--laptop-purple-accent));
+            -moz-background: linear-gradient(45deg, var(--laptop-red-accent), var(--laptop-purple-accent));
+            border: none;
+        }
+        
+        .laptop-btn-gradient:hover {
+            background: linear-gradient(45deg, var(--laptop-purple-accent), var(--laptop-red-accent));
+            -webkit-background: linear-gradient(45deg, var(--laptop-purple-accent), var(--laptop-red-accent));
+            -moz-background: linear-gradient(45deg, var(--laptop-purple-accent), var(--laptop-red-accent));
+        }
+        
+        .laptop-text-gradient {
+            background: linear-gradient(45deg, var(--laptop-red-accent), var(--laptop-purple-accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .laptop-section-bg {
+            background: rgba(45, 45, 45, 0.3);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }

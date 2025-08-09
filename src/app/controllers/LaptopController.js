@@ -5,7 +5,7 @@ const Session = require("../models/Session");
 
 class LaptopController{
 
-    // [GET] Render laptop detail page
+    // [GET] Render laptop detail page  
     async index(req, res,next){
         const sessionId_cookie = req.cookies.sessionId;
         const laptopDetail = await Laptop.findOne({slug : req.params.slug}).then(laptop => {
